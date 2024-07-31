@@ -34,6 +34,12 @@ export default function App() {
         <h1 className={subtitle({ class: "font-bold" })}>Popular</h1>
         <PlaceCarousel />
       </div>
+
+      {/* The carousel for recommended */}
+      <div className="mt-8 w-full">
+        <h1 className={subtitle({ class: "font-bold" })}>Recommended</h1>
+        {/* <RecommendedCarousel/> */}
+      </div>
     </section>
   );
 }
