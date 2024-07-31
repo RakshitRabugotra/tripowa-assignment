@@ -1,0 +1,24 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Rabbits Junior";
+  src: url("./fonts/Rabbits-Junior.eot");
+  src:
+    local("Rabbits Junior"),
+    local("Rabbits-Junior"),
+    url("./fonts/Rabbits-Junior.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Rabbits-Junior.woff2") format("woff2"),
+    url("./fonts/Rabbits-Junior.woff") format("woff"),
+    url("./fonts/Rabbits-Junior.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
