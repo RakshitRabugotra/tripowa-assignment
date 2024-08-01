@@ -23,7 +23,7 @@ export default async function PlacePage({
   const place = LOCAL_PLACES.find((value) => value.id === parseInt(params.id))!;
 
   return (
-    <section className="flex flex-col min-h-screen bg-default-50 items-center p-4 font-montserrat">
+    <section className="flex flex-col min-h-screen bg-default-50 items-center p-4 font-montserrat pb-28">
       {/* The image section with the card */}
       <ImageCard {...place} />
       {/* The section with headings */}
@@ -107,7 +107,7 @@ const FacilityIcon = ({
   return (
     <div className="rounded-2xl basis-1/4 bg-[#eff3fc] text-[#b6b6b6] p-4 flex flex-col items-center justify-center">
       {children}
-      <span className="text-xs">{subtitle}</span>
+      <span className="text-[10px] leading-3">{subtitle}</span>
     </div>
   );
 };

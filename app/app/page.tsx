@@ -35,14 +35,14 @@ export default function App() {
       {/* The carousel for popular */}
       <div className="px-4 mt-6 w-full">
         <h1 className={subtitle({ class: "font-bold" })}>Popular</h1>
-        <PlaceCarousel />
       </div>
+      <PlaceCarousel />
 
       {/* The carousel for recommended */}
       <div className="px-4 mt-6 w-full">
         <h1 className={subtitle({ class: "font-bold" })}>Recommended</h1>
-        <RecommendedCarousel />
       </div>
+      <RecommendedCarousel />
     </section>
   );
 }

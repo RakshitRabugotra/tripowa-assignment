@@ -10,10 +10,6 @@ import { LocationPinIcon } from "./icons";
 export const CountrySelect = () => {
   const [value, setValue] = useState(spots[0].city + ", " + spots[0].country);
 
-  useEffect(() => {
-    console.log({ value });
-  }, [value]);
-
   return (
     <div className="flex w-full max-w-40 flex-col gap-2">
       <Select
@@ -22,7 +18,7 @@ export const CountrySelect = () => {
         aria-label="select a country"
         className="max-w-xs"
         classNames={{
-          trigger: "border-none",
+          trigger: "border-none shadow-none",
           selectorIcon: "text-primary ",
         }}
         startContent={
