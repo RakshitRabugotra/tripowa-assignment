@@ -78,9 +78,10 @@ export const RecommendedCarousel = () => {
   return (
     <div className="w-full overflow-x-scroll">
       <div className="flex flex-row gap-4">
-        {HOLIDAY_PACKAGES.map((place, index) => (
-          <RecommendedCard {...place} key={index} />
-        ))}
+        {HOLIDAY_PACKAGES.map(
+          (place, index) =>
+            index < 2 && <RecommendedCard {...place} key={index} />
+        )}
       </div>
     </div>
   );
@@ -94,7 +95,7 @@ export const RecommendedCard: React.FC<HolidayPackage> = ({
 }) => {
   return (
     <Card shadow="sm" isPressable onPress={() => console.log("item pressed")}>
-      <CardBody className="overflow-visible p-0 relative">
+      <CardBody className="overflow-visible p-1 relative">
         <Image
           shadow="sm"
           radius="lg"

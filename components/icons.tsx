@@ -5,6 +5,7 @@ import { IconSvgProps } from "@/types";
 // React Icons
 import { FaLocationDot } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa";
+import { RiHome6Fill, RiHome6Line } from "react-icons/ri";
 
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
@@ -27,20 +28,6 @@ export const Logo: React.FC<IconSvgProps> = ({
     />
   </svg>
 );
-
-export const LocationPinIcon: React.FC<IconSvgProps> = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}) => <FaLocationDot {...props} />;
-
-export const StarIcon: React.FC<IconSvgProps> = ({
-  size = 24,
-  width,
-  height,
-  ...props
-}) => <FaStar {...props} />;
 
 export const DiscordIcon: React.FC<IconSvgProps> = ({
   size = 24,
@@ -203,3 +190,101 @@ export const HeartFilledIcon = ({
     />
   </svg>
 );
+
+/*
+From React Icons
+*/
+import { HiOutlineTicket, HiTicket } from "react-icons/hi";
+import { GoHeart, GoHeartFill } from "react-icons/go";
+import { MdPerson, MdPersonOutline } from "react-icons/md";
+import { NavItem } from "@/config/site";
+
+export const LocationPinIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => <FaLocationDot {...props} />;
+
+export const StarIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => <FaStar {...props} />;
+
+// Internal interface for defining Navigation Icons
+interface NavIcon extends IconSvgProps {
+  isActive: boolean;
+}
+
+// Navbar icons
+export const NavIcon = ({
+  iconHref,
+  ...props
+}: NavIcon & {
+  iconHref: NavItem["href"];
+}) => {
+  switch (iconHref) {
+    case "/app":
+      return <HomeIcon {...props} />;
+    case "/app/tickets":
+      return <TicketIcon {...props} />;
+    case "/app/favorites":
+      return <HeartIcon {...props} />;
+    case "/app/profile":
+      return <PersonIcon {...props} />;
+  }
+};
+
+export const HomeIcon: React.FC<NavIcon> = ({
+  size = 24,
+  width,
+  height,
+  isActive,
+  ...props
+}) =>
+  isActive ? (
+    <RiHome6Fill {...props} size={size} />
+  ) : (
+    <RiHome6Line {...props} size={size} />
+  );
+
+export const TicketIcon: React.FC<NavIcon> = ({
+  size = 24,
+  width,
+  height,
+  isActive,
+  ...props
+}) =>
+  isActive ? (
+    <HiTicket {...props} size={size} />
+  ) : (
+    <HiOutlineTicket {...props} size={size} />
+  );
+
+export const HeartIcon: React.FC<NavIcon> = ({
+  size = 24,
+  width,
+  height,
+  isActive,
+  ...props
+}) =>
+  isActive ? (
+    <GoHeartFill {...props} size={size} />
+  ) : (
+    <GoHeart {...props} size={size} />
+  );
+
+export const PersonIcon: React.FC<NavIcon> = ({
+  size = 24,
+  width,
+  height,
+  isActive,
+  ...props
+}) =>
+  isActive ? (
+    <MdPerson {...props} size={size} />
+  ) : (
+    <MdPersonOutline {...props} size={size} />
+  );

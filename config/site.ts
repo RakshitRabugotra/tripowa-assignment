@@ -1,64 +1,31 @@
 export type SiteConfig = typeof siteConfig;
 
+export type NavItem = {
+  label: string;
+  href: "/app" | "/app/tickets" | "/app/favorites" | "/app/profile";
+};
+
 export const siteConfig = {
   name: "Next.js + NextUI",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
       label: "Home",
-      href: "/",
+      href: "/app",
     },
     {
-      label: "Docs",
-      href: "/docs",
+      label: "Tickets",
+      href: "/app/tickets",
     },
     {
-      label: "Pricing",
-      href: "/pricing",
+      label: "Favorites",
+      href: "/app/favorites",
     },
     {
-      label: "Blog",
-      href: "/blog",
+      label: "My profile",
+      href: "/app/profile",
     },
-    {
-      label: "About",
-      href: "/about",
-    },
-  ],
-  navMenuItems: [
-    {
-      label: "Profile",
-      href: "/profile",
-    },
-    {
-      label: "Dashboard",
-      href: "/dashboard",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
-    {
-      label: "Team",
-      href: "/team",
-    },
-    {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
-    },
-    {
-      label: "Help & Feedback",
-      href: "/help-feedback",
-    },
-    {
-      label: "Logout",
-      href: "/logout",
-    },
-  ],
+  ] as NavItem[],
   links: {
     github: "https://github.com/nextui-org/nextui",
     twitter: "https://twitter.com/getnextui",

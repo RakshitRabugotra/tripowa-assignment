@@ -90,4 +90,16 @@ export const HOLIDAY_PACKAGES: HolidayPackage[] = [
     nights: 2,
     days: 3,
   },
+  {
+    image: "/images/recommended/rec-2.webp",
+    title: "Luxurious Aspen",
+    nights: 2,
+    days: 3,
+  },
+  {
+    image: "/images/recommended/rec-2.webp",
+    title: "Luxurious Aspen",
+    nights: 2,
+    days: 3,
+  },
 ];
