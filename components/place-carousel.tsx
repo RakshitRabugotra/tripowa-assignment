@@ -11,7 +11,6 @@ import {
 } from "@/config/constants";
 import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
-import { Button } from "@nextui-org/button";
 
 // Icons
 import { HeartFilledIcon, StarIcon } from "./icons";
@@ -77,12 +76,12 @@ export const PlaceCard: React.FC<LocalPlace> = ({
           </div>
 
           {fav && (
-            <Button
-              className="absolute bottom-0 right-4 translate-y-1/2 text-red-500 p-2 bg-white rounded-full z-20 min-w-fit h-fit"
+            <button
+              className="text-red-500 p-2 bg-white rounded-full z-10"
               onClick={handleLike}
             >
-              <HeartFilledIcon size={32} />
-            </Button>
+              <HeartFilledIcon size={16} />
+            </button>
           )}
         </CardFooter>
       </Skeleton>
