@@ -79,9 +79,15 @@ export interface HolidayPackage {
 
 export const HOLIDAY_PACKAGES: HolidayPackage[] = [
   {
-    image: "/images/rec-1.webp",
+    image: "/images/recommended/rec-1.webp",
     title: "Explore Aspen",
     nights: 4,
     days: 5,
+  },
+  {
+    image: "/images/recommended/rec-2.webp",
+    title: "Luxurious Aspen",
+    nights: 2,
+    days: 3,
   },
 ];

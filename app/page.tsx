@@ -14,15 +14,21 @@ export default function Home() {
       }}
     >
       <div className="mt-14">
-        <h1 className={title({ class: "font-rab text-8xl" })}>Aspen&nbsp;</h1>
+        <h1 className={title({ class: "text-white font-rab text-8xl" })}>
+          Aspen&nbsp;
+        </h1>
       </div>
       <div className="flex flex-col max-w-lg text-left p-10 w-full font-montserrat">
         <h2 className={subtitle({ class: "mt-4 text-xl text-white/80" })}>
           Plan your
         </h2>
 
-        <h1 className={title({ class: "font-medium mb-1" })}>Vacation</h1>
-        <h1 className={title({ class: "font-medium mb-2" })}>Luxurious</h1>
+        <h1 className={title({ class: "text-white font-medium mb-1" })}>
+          Vacation
+        </h1>
+        <h1 className={title({ class: "text-white font-medium mb-2" })}>
+          Luxurious
+        </h1>
 
         <Button
           variant="shadow"

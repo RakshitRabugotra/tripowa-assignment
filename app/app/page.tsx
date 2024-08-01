@@ -3,13 +3,16 @@ import { CONFIG } from "@/config/constants";
 import { CountrySelect } from "@/components/country-selection";
 import { SearchInput } from "@/components/search";
 import { CategoryChips } from "@/components/category-chips";
-import { PlaceCarousel } from "@/components/place-carousel";
+import {
+  PlaceCarousel,
+  RecommendedCarousel,
+} from "@/components/place-carousel";
 
 export default function App() {
   return (
     <section className="flex flex-col items-center justify-center py-4 md:py-10 font-montserrat">
       {/* The header section */}
-      <div className="w-full flex flex-row justify-between ">
+      <div className="px-4 w-full flex flex-row justify-between ">
         <div className="grow">
           <h2 className={subtitle({ class: "m-0" })}>Explore</h2>
           <h1
@@ -22,7 +25,7 @@ export default function App() {
       </div>
 
       {/* The search section */}
-      <div className="my-8 w-full">
+      <div className="px-4 my-8 w-full">
         <SearchInput />
       </div>
 
@@ -30,15 +33,15 @@ export default function App() {
       <CategoryChips />
 
       {/* The carousel for popular */}
-      <div className="mt-8 w-full">
+      <div className="px-4 mt-8 w-full">
         <h1 className={subtitle({ class: "font-bold" })}>Popular</h1>
         <PlaceCarousel />
       </div>
 
       {/* The carousel for recommended */}
-      <div className="mt-8 w-full">
+      <div className="px-4 mt-8 w-full">
         <h1 className={subtitle({ class: "font-bold" })}>Recommended</h1>
-        {/* <RecommendedCarousel/> */}
+        <RecommendedCarousel />
       </div>
     </section>
   );

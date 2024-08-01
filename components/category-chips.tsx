@@ -14,7 +14,7 @@ export const CategoryChips = () => {
 
   return (
     <div className="w-full overflow-scroll scrollbar-hide">
-      <div className="relative overflow-y-hidden flex items-center px-2 rounded-lg overflow-visible scrollbar-hide">
+      <div className="relative overflow-y-hidden flex items-center pl-4 rounded-lg overflow-visible scrollbar-hide">
         <div className="flex gap-4">
           {categories.map((category, index) => (
             <Chip

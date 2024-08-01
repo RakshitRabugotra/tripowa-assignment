@@ -7,7 +7,7 @@ export default function AppLayout({ children }: PropsWithChildren) {
   return (
     <>
       <Navbar />
-      <section className="p-4 min-h-screen">{children}</section>
+      <section className="min-h-screen pb-32">{children}</section>
     </>
   );
 }
