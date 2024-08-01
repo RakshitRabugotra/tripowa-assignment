@@ -8,7 +8,6 @@ import {
   NavbarContent,
   NavbarItem,
 } from "@nextui-org/navbar";
-import { ThemeSwitch } from "@/components/theme-switch";
 
 // Config
 import { NavItem, siteConfig } from "@/config/site";
@@ -22,7 +21,6 @@ export const Navbar = () => {
 
   return (
     <div className="fixed inset-0 top-auto z-[999]">
-      <ThemeSwitch />
       <NextUINavbar maxWidth="xl" position="sticky" isBlurred={false}>
         <NavbarContent className="flex basis-full" justify="center">
           <NavbarItem className="flex gap-2 w-full justify-around">

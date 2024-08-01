@@ -25,7 +25,7 @@ export default function App() {
       </div>
 
       {/* The search section */}
-      <div className="px-4 my-8 w-full">
+      <div className="px-4 my-6 w-full">
         <SearchInput />
       </div>
 
@@ -33,13 +33,13 @@ export default function App() {
       <CategoryChips />
 
       {/* The carousel for popular */}
-      <div className="px-4 mt-8 w-full">
+      <div className="px-4 mt-6 w-full">
         <h1 className={subtitle({ class: "font-bold" })}>Popular</h1>
         <PlaceCarousel />
       </div>
 
       {/* The carousel for recommended */}
-      <div className="px-4 mt-8 w-full">
+      <div className="px-4 mt-6 w-full">
         <h1 className={subtitle({ class: "font-bold" })}>Recommended</h1>
         <RecommendedCarousel />
       </div>

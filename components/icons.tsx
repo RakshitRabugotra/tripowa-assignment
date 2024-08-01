@@ -1,11 +1,27 @@
 import * as React from "react";
 
 import { IconSvgProps } from "@/types";
+import { NavItem } from "@/config/site";
 
 // React Icons
 import { FaLocationDot } from "react-icons/fa6";
-import { FaStar } from "react-icons/fa";
+import {
+  FaStar,
+  FaChevronLeft,
+  FaChevronDown,
+  FaChevronRight,
+  FaWifi,
+} from "react-icons/fa";
 import { RiHome6Fill, RiHome6Line } from "react-icons/ri";
+import { HiOutlineTicket, HiTicket } from "react-icons/hi";
+import { GoHeart, GoHeartFill } from "react-icons/go";
+import {
+  MdPerson,
+  MdPersonOutline,
+  MdDinnerDining,
+  MdOutlineBathtub,
+} from "react-icons/md";
+import { PiSwimmingPoolBold } from "react-icons/pi";
 
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
@@ -194,10 +210,41 @@ export const HeartFilledIcon = ({
 /*
 From React Icons
 */
-import { HiOutlineTicket, HiTicket } from "react-icons/hi";
-import { GoHeart, GoHeartFill } from "react-icons/go";
-import { MdPerson, MdPersonOutline } from "react-icons/md";
-import { NavItem } from "@/config/site";
+
+// Facility Icons
+export const Facility = {
+  Wifi: ({ width, height, ...props }: IconSvgProps) => <FaWifi {...props} />,
+  Dinner: ({ width, height, ...props }: IconSvgProps) => (
+    <MdDinnerDining {...props} />
+  ),
+  Bath: ({ width, height, ...props }: IconSvgProps) => (
+    <MdOutlineBathtub {...props} />
+  ),
+  Pool: ({ width, height, ...props }: IconSvgProps) => (
+    <PiSwimmingPoolBold {...props} />
+  ),
+};
+
+export const ChevronDown: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => <FaChevronDown {...props} />;
+
+export const ChevronLeft: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => <FaChevronLeft {...props} />;
+
+export const ChevronRight: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => <FaChevronRight {...props} />;
 
 export const LocationPinIcon: React.FC<IconSvgProps> = ({
   size = 24,

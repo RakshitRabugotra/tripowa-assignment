@@ -43,30 +43,71 @@ export const CATEGORIES = [
 ];
 
 export interface LocalPlace {
+  id: number;
   image: string;
   title: string;
   rating: number;
   isFav: boolean;
+  reviews: number;
+  description: string;
+  price: number;
 }
 
 export const LOCAL_PLACES: LocalPlace[] = [
   {
+    id: 1,
     image: "/images/carousel/car-1.webp",
     title: "Alley Palace",
     rating: 4.1,
+    reviews: 632,
+    description:
+      "Aspen is as close as one gets to a storybook alpine town in America. The choose-your-own-adventure possibilities — skiing, hiking, dining, shopping and more lorem ipsum it goes on",
     isFav: true,
+    price: 632 / 3,
   },
   {
+    id: 2,
     image: "/images/carousel/car-2.webp",
     title: "Coeurdes Alpes",
     rating: 4.5,
+    reviews: 852,
+    description:
+      "Vail is a charming mountain town that feels like a picturesque scene from a fairytale. With its cobblestone streets, alpine architecture, and a backdrop of snow-capped peaks, Vail offers a plethora of adventures. Whether you're skiing down world-renowned slopes, exploring scenic hiking trails, indulging in gourmet dining, or browsing the boutique shops, there's always something to captivate your imagination.",
     isFav: false,
+    price: 852 / 3,
   },
   {
+    id: 3,
     image: "/images/carousel/car-1.webp",
     title: "Alley Palace",
     rating: 3.5,
+    reviews: 380,
+    description:
+      "Nestled in the heart of the Teton Range, Jackson Hole is a quintessential alpine paradise. This town is an adventurer's dream come true, offering endless opportunities for skiing, wildlife viewing, and backcountry exploration. With its rustic charm, vibrant arts scene, and cozy lodges, Jackson Hole is a perfect blend of rugged wilderness and refined luxury.",
     isFav: false,
+    price: 380 / 3,
+  },
+  {
+    id: 4,
+    image: "/images/carousel/car-1.webp",
+    title: "Alley Palace",
+    rating: 3.5,
+    reviews: 967,
+    description:
+      "Park City is a vibrant mountain town that combines the best of both worlds: exhilarating outdoor activities and rich cultural experiences. From the thrill of skiing and snowboarding on pristine slopes to exploring historic Main Street lined with art galleries, restaurants, and shops, Park City invites you to craft your own unforgettable adventure.",
+    isFav: false,
+    price: 967 / 3,
+  },
+  {
+    id: 5,
+    image: "/images/carousel/car-1.webp",
+    title: "Alley Palace",
+    rating: 3.5,
+    reviews: 620,
+    description:
+      "Tucked away in a stunning box canyon, Telluride is a hidden gem that offers a storybook alpine experience. The town's charming streets are filled with historic buildings, gourmet restaurants, and unique shops. Whether you're skiing down legendary runs, hiking through breathtaking landscapes, or enjoying a festival in the picturesque town park, Telluride promises an enchanting getaway.",
+    isFav: false,
+    price: 620 / 3,
   },
 ];
 
